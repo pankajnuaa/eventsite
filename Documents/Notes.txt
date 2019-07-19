@@ -1,0 +1,185 @@
+Note for the course
+Pracice Exercise 
+
+https://github.com/jmcooper/angular-fundamentals-files
+{{event.name}} --> Intepolation or one way binding
+
+
+
+Course Overview
+=========================
+
+Architecture
+Angular components
+Reusable Services
+Forms and validation
+API Calls
+Unit tests
+Package Everything together
+
+Getting Started with Angular 
+================================
+Create hello world angular app
+will use ES2015 or es6 in this course 
+will use typescript in this course
+
+
+Practice Exercise
+----------------------
+https://jcoop.io/angular-practice-exercises/
+
+Introduction to TypeScript
+------------------------------
+Superset of Javascript 
+typescript --> Transpiles --> JS
+
+Typescript Features we'll be using 
+- Static Typing 
+
+let name: string
+let age: number
+let birthDate: date
+
+- Interfaces
+interface ICat{
+	name: string;
+	age?: number   //? is optional 
+}
+
+use of th e interface 
+
+let fluffy: ICat
+
+fluffy = {
+	name: 'Fluffy'
+}
+
+
+- Class Properties
+
+class Cat{
+name;
+color;
+constructor(name){
+this.name = name
+}
+}
+
+- Public/Private Accessibility
+
+class Cat{
+name;
+color;
+constructor(name){
+this.name = name
+}
+}
+
+class members are private by default 
+
+class Cat{
+constructor(private name, private color){}
+}
+
+Comparing Angular to Angular JS
+-------------------------------------
+
+
+A Conceptual Overview of Angular
+-----------------------------------
+- we can have multiple modules, and a module is loaded when we navigate to it. 
+- When we navigate to a different module then we'll load the other module 
+- Services are registered in root module 
+- pipes,Component, Directive are registerd in a module 
+
+Here's what we'll be Building 
+--------------------------------
+Upcoming Angular Events
+
+Installing Git and Node
+-------------------------
+
+
+Getting Started with the angular cli
+-----------------------------------
+npm install -g @angular/cli@7.1.2
+ng new ng-EventsSite
+
+we replaced package.json and packagelock.json with the contents from github
+then we deleted the node modules
+and npm install 
+and npm serve
+Bootstrapping an Angular App
+-------------------------------
+
+angular.json -> main.ts -> AppModule -> EventsAppComponent
+index.html -> (display)EventsAppComponent
+
+A Brief Look at the App Module 
+---------------------------------
+declar tion contains -> component, pipe or directive
+providers contains -> services
+import -> importing module internal or external 
+
+
+
+
+Accessing Static Files
+----------------------------
+access a image file 
+
+npm pacakge from the instructor 
+npm install ngf-bootstrap --save
+
+
+Creating and communicating Between Angular Components
+=======================================================
+inline Template and data-binding 
+Using external Templates
+Inter-component communication 
+styling components
+style Encapsulation 
+
+Creating your first Data-bound component
+--------------------------------------------
+Created a html template inside componenet and used data from the component.ts
+
+Using external Templates
+------------------------------
+
+Communicating with child Component using @ Input
+---------------------------------------------------
+Parent Component
+export class EventsListComponent {
+  event1 = {
+    id: 1,
+    name: 'Angular Connect'
+	}
+ <event-thumbnail [event] = "event1"></event-thumbnail>
+ 
+ Child Component
+  @Input() event: any;
+
+Communicating with Parent Components using @Output
+-----------------------------------------------------
+
+using template variables to interact with child components
+--------------------------------------------------------------
+
+styling components
+---------------------
+
+Exploring Angular's CSS Encapsulation 
+-----------------------------------------
+
+Adding a Site Header
+------------------------
+
+Exploring the Angular Template Syntax
+=========================================
+
+Creating Reuable Angular Services
+====================================
+
+Routing and Navigating Pages
+===============================
